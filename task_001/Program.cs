@@ -8,15 +8,22 @@
 
 Console.Clear();
 
-Console.Write("Введите число a: ");
-int a = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите число b: "); 
-int b = Convert.ToInt32(Console.ReadLine());
-int max = a;
+void MaxMinNumber(int a, int b)
+{
+    Console.Write($"(a = {a}, b = {b}) ");
 
-if (b > max) max = b;
+    int max = a;
+    int min = a;
 
-Console.Write("max = ");
-Console.WriteLine(max);
+    if (b > max) max = b;
+    else min = b;
+
+    Console.Write($"max = {max}; ");
+    Console.WriteLine($"min = {min}");
+}
+
+MaxMinNumber(5, 7);
+MaxMinNumber(2, 10);
+MaxMinNumber(-9, -3);
 
 
