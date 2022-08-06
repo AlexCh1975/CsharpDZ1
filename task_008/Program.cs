@@ -25,6 +25,8 @@ void EvenNumber(int N)
     Console.WriteLine();
 }
 
-EvenNumber(5);
-EvenNumber(8);
+Console.Write("Введите число: ");
+int N = Convert.ToInt32(Console.ReadLine());
+EvenNumber(N);
+
 
