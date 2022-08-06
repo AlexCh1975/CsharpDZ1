@@ -9,18 +9,17 @@
 
  void MaxNumber(int a, int b, int c)
  {
-    int max = a;
-    if (b > max) max = b;
-    if (c > max) max = c;
-
-    Console.Write(a);
-    Console.Write(", ");
-    Console.Write(b);
-    Console.Write(", ");
-    Console.Write(c);
-    Console.Write("  -> ");
-    Console.Write("max = ");
-    Console.WriteLine(max);
+    int[] arr = {a, b, c};
+    int max = arr[0];
+    for (int i = 0; i < 3; i++)
+    {
+         if (arr[i] > max) 
+        {
+            max = arr[i];
+        } 
+    }
+   
+    Console.WriteLine($"{a}, {b}, {c} max -> {max}");
  }
 
 MaxNumber(2, 3, 7);
